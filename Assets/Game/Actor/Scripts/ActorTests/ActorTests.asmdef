@@ -1,0 +1,28 @@
+{
+  "name": "ActorTests",
+  "rootNamespace": "ActorTests",
+  "references": [
+    "UnityEditor.TestRunner",
+    "DDDCore",
+    "Zenject",
+    "DDDTestFramework",
+    "ActorEntity",
+    "ActorUseCase"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": true,
+  "precompiledReferences": [
+    "nunit.framework.dll",
+    "NSubstitute.dll"
+  ],
+  "autoReferenced": false,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
