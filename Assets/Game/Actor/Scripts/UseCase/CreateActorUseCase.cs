@@ -27,6 +27,8 @@ namespace Game.Actor.Scripts.UseCase
             var actor = new Entity.Actor(id);
             repository.Save(actor);
 
+            domainEventBus.PostAll(actor);
+
             output.SetId(id);
             output.SetExitCode(ExitCode.SUCCESS);
         }

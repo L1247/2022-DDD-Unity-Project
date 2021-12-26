@@ -1,8 +1,10 @@
 #region
 
+using DDDCore.Implement;
 using DDDCore.Usecase.CQRS;
 using DDDTestFrameWork;
 using Game.Actor.Scripts.Entity;
+using Game.Actor.Scripts.Entity.Events;
 using Game.Actor.Scripts.UseCase;
 using NSubstitute;
 using NUnit.Framework;
@@ -29,8 +31,8 @@ namespace ActorTests
             var   repository         = Container.Resolve<IActorRepository>();
             Actor actor              = null;
             repository.Save(Arg.Do<Actor>(a => actor = a));
-            // ActorCreated actorCreated = null;
-            // publisher.Publish(Arg.Do<ActorCreated>(e => actorCreated = e));
+            ActorCreated actorCreated = null;
+            publisher.Publish(Arg.Do<ActorCreated>(e => actorCreated = e));
 
             var input  = new CreateActorInput();
             var output = CqrsCommandPresenter.NewInstance();
@@ -47,8 +49,8 @@ namespace ActorTests
                 })
                 .And("a ActorCreated event is published , and id equals" , () =>
                 {
-                    // publisher.Received(1).Publish(Arg.Is<DomainEvent>(domainEvent => domainEvent.GetType() == typeof(ActorCreated)));
-                    // Assert.AreEqual(actorId , actorCreated.ActorId , "ActorId is not equal");
+                    publisher.Received(1).Publish(Arg.Is<DomainEvent>(domainEvent => domainEvent.GetType() == typeof(ActorCreated)));
+                    Assert.AreEqual(actorId , actorCreated.actorId , "ActorId is not equal");
                 })
                 .And("the result is success" , () =>
                 {

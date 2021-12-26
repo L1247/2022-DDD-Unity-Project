@@ -2,12 +2,13 @@
   "name": "ActorTests",
   "rootNamespace": "ActorTests",
   "references": [
-    "UnityEditor.TestRunner",
-    "DDDCore",
-    "Zenject",
-    "DDDTestFramework",
-    "ActorEntity",
-    "ActorUseCase"
+      "UnityEditor.TestRunner",
+      "DDDCore",
+      "Zenject",
+      "DDDTestFramework",
+      "ActorEntity",
+      "ActorUseCase",
+      "MessagePipe"
   ],
   "includePlatforms": [
     "Editor"
