@@ -2,9 +2,12 @@
   "name": "ActorApplication",
   "rootNamespace": "",
   "references": [
+    "GUID:b18a16a3dcf3d01428b99057a0d9b91e",
     "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
     "GUID:560b04d1a97f54a4e82edc0cbbb69285",
-    "GUID:f22f718b9b174a74d89f976a69f9dd2a"
+    "GUID:f22f718b9b174a74d89f976a69f9dd2a",
+    "GUID:041a6b17acc62af44b61120e0e14bb3b",
+    "GUID:d5850554ec9b9384187cbcb6fb10d3e9"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],

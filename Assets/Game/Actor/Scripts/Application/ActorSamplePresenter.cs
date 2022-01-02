@@ -1,7 +1,7 @@
 #region
 
 using AutoBot.Scripts.Utilities.Extensions;
-using UnityEngine;
+using Game.Actor.Scripts.Adapter.Controller;
 using Zenject;
 
 #endregion
@@ -15,13 +15,16 @@ namespace Game.Actor.Scripts.Application
         [Inject]
         private ActorReferences actorReferences;
 
+        [Inject]
+        private ActorController actorController;
+
     #endregion
 
     #region Public Methods
 
         public void Initialize()
         {
-            actorReferences.CreateActorButton.BindClick(() => { Debug.Log("CreateActor"); });
+            actorReferences.CreateActorButton.BindClick(() => { actorController.CreateActor(); });
         }
 
     #endregion

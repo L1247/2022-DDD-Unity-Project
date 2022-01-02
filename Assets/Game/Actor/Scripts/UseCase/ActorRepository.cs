@@ -7,5 +7,5 @@ using Game.Actor.Scripts.Entity;
 
 namespace Game.Actor.Scripts.UseCase
 {
-    public class ActorRepository : AbstractRepository<IActor> { }
+    public class ActorRepository : AbstractRepository<IActor> , IActorRepository { }
 }
