@@ -21,13 +21,15 @@ namespace Game.Actor.Scripts.Adapter.Controller
 
     #region Public Methods
 
-        public void CreateActor()
+        public CqrsCommandPresenter CreateActor(string actorDataId)
         {
-            var input  = new CreateActorInput();
+            var input = new CreateActorInput();
+            input.actorDataId = actorDataId;
             var output = new CqrsCommandPresenter();
             createActorUseCase.Execute(input , output);
             var exitCode = output.GetExitCode();
             Contract.Ensure(exitCode == ExitCode.SUCCESS , "ExitCode should be success");
+            return output;
         }
 
     #endregion

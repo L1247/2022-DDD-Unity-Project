@@ -11,7 +11,8 @@ namespace Game.Actor.Scripts.Application
     {
     #region Public Variables
 
-        public Button CreateActorButton;
+        public Button     CreateActorButton;
+        public GameObject ActorPrefab;
 
     #endregion
     }
