@@ -10,15 +10,18 @@ namespace Game.Actor.Scripts.Entity.Events
     {
     #region Public Variables
 
+        public string actorDataId;
+
         public string actorId;
 
     #endregion
 
     #region Constructor
 
-        public ActorCreated(string actorId)
+        public ActorCreated(string actorId , string actorDataId)
         {
-            this.actorId = actorId;
+            this.actorId     = actorId;
+            this.actorDataId = actorDataId;
         }
 
     #endregion

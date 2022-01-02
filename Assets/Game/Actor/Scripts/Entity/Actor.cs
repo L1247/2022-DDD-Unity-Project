@@ -9,11 +9,18 @@ namespace Game.Actor.Scripts.Entity
 {
     public class Actor : AggregateRoot , IActor
     {
+    #region Public Variables
+
+        public string DataId { get; }
+
+    #endregion
+
     #region Constructor
 
-        public Actor(string id) : base(id)
+        public Actor(string id , string dataId) : base(id)
         {
-            var actorCreated = new ActorCreated(id);
+            DataId = dataId;
+            var actorCreated = new ActorCreated(id , DataId);
             AddDomainEvent(actorCreated);
         }
 
