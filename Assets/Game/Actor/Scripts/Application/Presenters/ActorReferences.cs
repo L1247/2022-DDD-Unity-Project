@@ -5,14 +5,13 @@ using UnityEngine.UI;
 
 #endregion
 
-namespace Game.Actor.Scripts.Application
+namespace Game.Actor.Scripts.Application.Presenters
 {
     public class ActorReferences : MonoBehaviour
     {
     #region Public Variables
 
-        public Button     CreateActorButton;
-        public GameObject ActorPrefab;
+        public Button CreateActorButton;
 
     #endregion
     }

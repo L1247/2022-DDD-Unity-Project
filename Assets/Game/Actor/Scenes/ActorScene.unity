@@ -232,7 +232,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89715ad69b973a14899afa2c6730b30b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scriptableObjectInstallers: []
+  _scriptableObjectInstallers:
+  - {fileID: 11400000, guid: 380731f19a24b334ca4ad1b172ade915, type: 2}
   _monoInstallers:
   - {fileID: 429727266}
   _installerPrefabs: []
@@ -669,7 +670,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CreateActorButton: {fileID: 1393857866}
-  ActorPrefab: {fileID: 1628185727365320317, guid: c1ba59a793cf1534789ea7864f2b049d, type: 3}
 --- !u!114 &1500852367
 MonoBehaviour:
   m_ObjectHideFlags: 0

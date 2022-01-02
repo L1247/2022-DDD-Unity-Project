@@ -8,7 +8,7 @@ using Zenject;
 
 #endregion
 
-namespace Game.Actor.Scripts.Application
+namespace Game.Actor.Scripts.Application.Presenters
 {
     public class ActorSamplePresenter : IInitializable , IActorPresenter
     {
@@ -20,14 +20,18 @@ namespace Game.Actor.Scripts.Application
         [Inject]
         private ActorController actorController;
 
+        [Inject]
+        private ActorFactory actorFactory;
+
     #endregion
 
     #region Public Methods
 
         public void CreateActor()
         {
-            var position = Random.onUnitSphere * 3;
-            Object.Instantiate(actorReferences.ActorPrefab , position , Quaternion.identity);
+            var actorComponent = actorFactory.Create();
+            var position       = Random.onUnitSphere * 3;
+            actorComponent.SetPosition(position);
         }
 
         public void Initialize()
