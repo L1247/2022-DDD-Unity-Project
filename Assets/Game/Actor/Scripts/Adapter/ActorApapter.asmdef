@@ -1,9 +1,10 @@
 {
-  "name": "ActorEntity",
-  "rootNamespace": "Actor.Entity",
+  "name": "ActorApapter",
+  "rootNamespace": "",
   "references": [
-    "GUID:b18a16a3dcf3d01428b99057a0d9b91e",
-    "GUID:55598cdeb5ba4cc43979cdb28a877e6b"
+    "GUID:d5850554ec9b9384187cbcb6fb10d3e9",
+    "GUID:55598cdeb5ba4cc43979cdb28a877e6b",
+    "GUID:b18a16a3dcf3d01428b99057a0d9b91e"
   ],
   "includePlatforms": [],
   "excludePlatforms": [],
