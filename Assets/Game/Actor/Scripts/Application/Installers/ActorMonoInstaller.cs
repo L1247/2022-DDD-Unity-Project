@@ -1,7 +1,6 @@
 #region
 
 using System;
-using DDDCore.Implement;
 using Game.Actor.Scripts.Adapter.Controller;
 using Game.Actor.Scripts.Adapter.EventHandlers;
 using Game.Actor.Scripts.Application.Components;
@@ -27,7 +26,6 @@ namespace Game.Actor.Scripts.Application.Installers
 
         public override void InstallBindings()
         {
-            DDDInstaller.Install(Container);
             // 4 Application Layer
             Container.BindInterfacesAndSelfTo<ActorSamplePresenter>().AsSingle();
             // 3 Adapter Layer

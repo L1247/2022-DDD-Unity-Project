@@ -36,7 +36,7 @@ namespace Game.Actor.Scripts.Application.Presenters
 
         public void Initialize()
         {
-            actorReferences.CreateActorButton.BindClick(() => { actorController.CreateActor("123"); });
+            actorReferences.CreateActorButton.BindClick(() => actorController.CreateActor("123"));
         }
 
     #endregion
