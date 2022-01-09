@@ -22,7 +22,7 @@ namespace Game.Actor.Scripts.Adapter.EventHandlers
 
         public ActorEventHandler(IDomainEventBus domainEventBus) : base(domainEventBus)
         {
-            Register<ActorCreated>(created => { actorPresenter.CreateActor(); });
+            Register<ActorCreated>(created => { actorPresenter.CreateActor(created.actorDataId); });
         }
 
     #endregion

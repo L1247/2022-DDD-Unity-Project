@@ -13,6 +13,9 @@ namespace Game.Actor.Scripts.Application.Components
 
         private Transform trans;
 
+        [SerializeField]
+        private SpriteRenderer mainSpriteRenderer;
+
     #endregion
 
     #region Unity events
@@ -29,6 +32,11 @@ namespace Game.Actor.Scripts.Application.Components
         public void SetPosition(Vector3 position)
         {
             trans.position = position;
+        }
+
+        public void SetSprite(Sprite sprite)
+        {
+            mainSpriteRenderer.sprite = sprite;
         }
 
     #endregion

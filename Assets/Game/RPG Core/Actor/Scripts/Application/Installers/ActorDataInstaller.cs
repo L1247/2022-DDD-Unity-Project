@@ -1,5 +1,6 @@
 #region
 
+using Game.RPG_Core.Actor.Scripts.Datas;
 using UnityEngine;
 using Zenject;
 
@@ -7,12 +8,15 @@ using Zenject;
 
 namespace Game.Actor.Scripts.Application.Installers
 {
-    [CreateAssetMenu]
     public class ActorDataInstaller : ScriptableObjectInstaller
     {
-    #region Public Variables
+    #region Private Variables
 
-        public ActorMonoInstaller.Settings actorMonoInstallerSettings;
+        [SerializeField]
+        private ActorMonoInstaller.Settings actorMonoInstallerSettings;
+
+        [SerializeField]
+        private ActorDataOverview overview;
 
     #endregion
 
@@ -21,6 +25,7 @@ namespace Game.Actor.Scripts.Application.Installers
         public override void InstallBindings()
         {
             Container.BindInstance(actorMonoInstallerSettings);
+            Container.BindInstance(overview);
         }
 
     #endregion

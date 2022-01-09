@@ -4,7 +4,7 @@ namespace Game.Actor.Scripts.Adapter.EventHandlers
     {
     #region Public Methods
 
-        void CreateActor();
+        void CreateActor(string dataId);
 
     #endregion
     }
