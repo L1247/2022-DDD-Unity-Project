@@ -2,7 +2,7 @@
 
 using AutoBot.Scripts.Utilities.Extensions;
 using Game.Actor.Scripts.Adapter.Controller;
-using Game.Actor.Scripts.Adapter.EventHandlers;
+using Game.Actor.Scripts.Application.Components;
 using Game.RPG_Core.Actor.Scripts.Datas;
 using UnityEngine;
 using Zenject;
@@ -11,7 +11,7 @@ using Zenject;
 
 namespace Game.Actor.Scripts.Application.Presenters
 {
-    public class ActorSamplePresenter : IInitializable , IActorPresenter
+    public class ActorSamplePresenter : IInitializable
     {
     #region Private Variables
 
@@ -21,8 +21,6 @@ namespace Game.Actor.Scripts.Application.Presenters
         [Inject]
         private ActorController actorController;
 
-        [Inject]
-        private ActorFactory actorFactory;
 
         [Inject]
         private ActorDataOverview actorDataOverview;
@@ -31,16 +29,6 @@ namespace Game.Actor.Scripts.Application.Presenters
 
     #region Public Methods
 
-        public void CreateActor(string dataId)
-        {
-            var actorComponent = actorFactory.Create();
-            var position       = Random.onUnitSphere * 3;
-            actorComponent.SetPosition(position);
-            var actorData = actorDataOverview.GetData(dataId);
-            if (actorData == null) return;
-            actorComponent.SetSprite(actorData.MainSprite);
-        }
-
         public void Initialize()
         {
             actorReferences.CreateActorButton.BindClick(() =>
@@ -48,6 +36,15 @@ namespace Game.Actor.Scripts.Application.Presenters
                 var randomData = actorDataOverview.GetRandomData();
                 actorController.CreateActor(randomData.DataId);
             });
+        }
+
+        public void ShowActor(ActorComponent actorComponent , string dataId)
+        {
+            var position = Random.onUnitSphere * 3;
+            actorComponent.SetPosition(position);
+            var actorData = actorDataOverview.GetData(dataId);
+            if (actorData == null) return;
+            actorComponent.SetSprite(actorData.MainSprite);
         }
 
     #endregion

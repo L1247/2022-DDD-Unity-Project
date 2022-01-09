@@ -7,6 +7,7 @@ using Game.Actor.Scripts.Application.Components;
 using Game.Actor.Scripts.Application.Presenters;
 using Game.Actor.Scripts.UseCase;
 using Game.RPG_Core.Actor.Adapter.Repository;
+using Game.RPG_Core.Actor.Scripts.Application.Flows;
 using UnityEngine;
 using Zenject;
 
@@ -28,6 +29,7 @@ namespace Game.Actor.Scripts.Application.Installers
         public override void InstallBindings()
         {
             // 4 Application Layer
+            Container.BindInterfacesAndSelfTo<ActorFlow>().AsSingle();
             Container.BindInterfacesAndSelfTo<ActorSamplePresenter>().AsSingle();
             // 3 Adapter Layer
             Container.Bind<ActorController>().AsSingle();

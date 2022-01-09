@@ -1,10 +1,10 @@
 namespace Game.Actor.Scripts.Adapter.EventHandlers
 {
-    public interface IActorPresenter
+    public interface IActorFlow
     {
     #region Public Methods
 
-        void CreateActor(string dataId);
+        void WhenActorCreated(string dataId);
 
     #endregion
     }

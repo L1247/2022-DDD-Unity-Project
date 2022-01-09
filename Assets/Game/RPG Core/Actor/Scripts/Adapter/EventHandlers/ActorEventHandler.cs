@@ -14,7 +14,7 @@ namespace Game.Actor.Scripts.Adapter.EventHandlers
     #region Private Variables
 
         [Inject]
-        private IActorPresenter actorPresenter;
+        private IActorFlow actorFlow;
 
     #endregion
 
@@ -22,7 +22,7 @@ namespace Game.Actor.Scripts.Adapter.EventHandlers
 
         public ActorEventHandler(IDomainEventBus domainEventBus) : base(domainEventBus)
         {
-            Register<ActorCreated>(created => { actorPresenter.CreateActor(created.actorDataId); });
+            Register<ActorCreated>(created => actorFlow.WhenActorCreated(created.actorDataId));
         }
 
     #endregion
