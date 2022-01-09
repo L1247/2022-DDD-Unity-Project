@@ -6,5 +6,12 @@ using DDDCore.Model;
 
 namespace RPG_Core.Actor.Entity.ExposedClasses
 {
-    public interface IActor : IAggregateRoot { }
+    public interface IActor : IAggregateRoot
+    {
+    #region Public Variables
+
+        string DataId { get; }
+
+    #endregion
+    }
 }

@@ -1,7 +1,9 @@
 #region
 
+using System.Collections.Generic;
 using DDDCore.Usecase.CQRS;
 using Game.Actor.Scripts.UseCase;
+using RPG_Core.Actor.Entity.ExposedClasses;
 using ThirtyParty.DDDCore.Implement.CQRS;
 using Utilities.Contract;
 using Zenject;
@@ -17,6 +19,9 @@ namespace Game.Actor.Scripts.Adapter.Controller
         [Inject]
         private CreateActorUseCase createActorUseCase;
 
+        [Inject]
+        private IActorRepository actorRepository;
+
     #endregion
 
     #region Public Methods
@@ -30,6 +35,12 @@ namespace Game.Actor.Scripts.Adapter.Controller
             var exitCode = output.GetExitCode();
             Contract.Ensure(exitCode == ExitCode.SUCCESS , "ExitCode should be success");
             return output;
+        }
+
+        public List<IActor> GetAllActor()
+        {
+            var actors = actorRepository.GetAll();
+            return actors;
         }
 
     #endregion

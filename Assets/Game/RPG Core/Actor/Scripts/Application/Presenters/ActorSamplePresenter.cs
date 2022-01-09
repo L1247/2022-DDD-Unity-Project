@@ -21,7 +21,6 @@ namespace Game.Actor.Scripts.Application.Presenters
         [Inject]
         private ActorController actorController;
 
-
         [Inject]
         private ActorDataOverview actorDataOverview;
 
@@ -45,6 +44,13 @@ namespace Game.Actor.Scripts.Application.Presenters
             var actorData = actorDataOverview.GetData(dataId);
             if (actorData == null) return;
             actorComponent.SetSprite(actorData.MainSprite);
+        }
+
+        public void ShowActorCount()
+        {
+            var countText = actorReferences.ActorCountText;
+            var allActor  = actorController.GetAllActor();
+            countText.text = $"Actor Count: {allActor.Count}";
         }
 
     #endregion

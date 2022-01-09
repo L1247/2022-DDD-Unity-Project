@@ -1,5 +1,6 @@
 #region
 
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,8 @@ namespace Game.Actor.Scripts.Application.Presenters
     {
     #region Public Variables
 
-        public Button CreateActorButton;
+        public Button   CreateActorButton;
+        public TMP_Text ActorCountText;
 
     #endregion
     }

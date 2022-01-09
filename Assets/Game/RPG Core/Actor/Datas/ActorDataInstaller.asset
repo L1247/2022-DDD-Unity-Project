@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actorMonoInstallerSettings:
     actorPrefab: {fileID: 1628185727365320317, guid: c1ba59a793cf1534789ea7864f2b049d, type: 3}
+  overview: {fileID: 11400000, guid: a70297d2ded64584a9ce27f58d25a758, type: 2}

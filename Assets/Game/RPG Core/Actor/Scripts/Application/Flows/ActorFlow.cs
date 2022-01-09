@@ -16,7 +16,7 @@ namespace Game.RPG_Core.Actor.Scripts.Application.Flows
         private ActorFactory actorFactory;
 
         [Inject]
-        private ActorSamplePresenter actorSamplePresenter;
+        private ActorSamplePresenter actorPresenter;
 
     #endregion
 
@@ -27,7 +27,8 @@ namespace Game.RPG_Core.Actor.Scripts.Application.Flows
             // Create actor instances with factor.
             var actorComponent = actorFactory.Create();
             // Display actor details by presenter.
-            actorSamplePresenter.ShowActor(actorComponent , dataId);
+            actorPresenter.ShowActor(actorComponent , dataId);
+            actorPresenter.ShowActorCount();
         }
 
     #endregion
