@@ -24,7 +24,7 @@ namespace Game.Actor.Scripts.UseCase
         public override void Execute(CreateActorInput input , CqrsCommandPresenter output)
         {
             var id    = Guid.NewGuid().ToString();
-            var actor = new Entity.Actor(id , input.actorDataId);
+            var actor = new global::Actor.Scripts.Entity.Actor(id , input.actorDataId);
             repository.Save(actor);
 
             domainEventBus.PostAll(actor);

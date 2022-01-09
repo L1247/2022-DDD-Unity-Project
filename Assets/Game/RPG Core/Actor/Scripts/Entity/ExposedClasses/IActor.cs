@@ -4,7 +4,7 @@ using DDDCore.Model;
 
 #endregion
 
-namespace Game.Actor.Scripts.Entity
+namespace RPG_Core.Actor.Entity.ExposedClasses
 {
     public interface IActor : IAggregateRoot { }
 }

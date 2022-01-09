@@ -2,7 +2,7 @@
 
 using DDDCore.Event;
 using DDDCore.Implement;
-using Game.Actor.Scripts.Entity.Events;
+using Game.RPG_Core.Actor.Scripts.Entity.ExposedClasses.Events;
 using Zenject;
 
 #endregion

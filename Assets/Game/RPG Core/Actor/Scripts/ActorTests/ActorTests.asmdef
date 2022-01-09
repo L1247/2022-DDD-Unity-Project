@@ -9,7 +9,7 @@
     "ActorEntity",
     "ActorUseCase",
     "MessagePipe",
-    "ActorEvents"
+    "ActorExposedClasses"
   ],
   "includePlatforms": [
     "Editor"

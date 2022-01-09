@@ -1,11 +1,12 @@
 #region
 
 using DDDCore.Implement;
-using Game.Actor.Scripts.Entity.Events;
+using Game.RPG_Core.Actor.Scripts.Entity.ExposedClasses.Events;
+using RPG_Core.Actor.Entity.ExposedClasses;
 
 #endregion
 
-namespace Game.Actor.Scripts.Entity
+namespace Actor.Scripts.Entity
 {
     public class Actor : AggregateRoot , IActor
     {

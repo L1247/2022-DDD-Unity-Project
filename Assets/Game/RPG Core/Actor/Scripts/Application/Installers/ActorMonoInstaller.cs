@@ -6,6 +6,7 @@ using Game.Actor.Scripts.Adapter.EventHandlers;
 using Game.Actor.Scripts.Application.Components;
 using Game.Actor.Scripts.Application.Presenters;
 using Game.Actor.Scripts.UseCase;
+using Game.RPG_Core.Actor.Adapter.Repository;
 using UnityEngine;
 using Zenject;
 

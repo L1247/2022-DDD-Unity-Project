@@ -3,8 +3,8 @@
 using DDDCore.Implement;
 using DDDCore.Usecase.CQRS;
 using DDDTestFrameWork;
-using Game.Actor.Scripts.Entity.Events;
 using Game.Actor.Scripts.UseCase;
+using Game.RPG_Core.Actor.Scripts.Entity.ExposedClasses.Events;
 using NSubstitute;
 using NUnit.Framework;
 using ThirtyParty.DDDCore.DDDTestFramwork;
@@ -13,7 +13,7 @@ using Zenject;
 
 #endregion
 
-namespace ActorTests.Game.Actor.Scripts.ActorTests
+namespace Actor.Scripts.ActorTests
 {
     [TestFixture]
     public class CreateActorUseCaseTests : DDDUnitTestFixture
@@ -26,10 +26,10 @@ namespace ActorTests.Game.Actor.Scripts.ActorTests
             Container.Bind<IActorRepository>().FromSubstitute();
             Container.Bind<CreateActorUseCase>().AsSingle();
 
-            var                                     createActorUseCase = Container.Resolve<CreateActorUseCase>();
-            var                                     repository         = Container.Resolve<IActorRepository>();
-            global::Game.Actor.Scripts.Entity.Actor actor              = null;
-            repository.Save(Arg.Do<global::Game.Actor.Scripts.Entity.Actor>(a => actor = a));
+            var          createActorUseCase = Container.Resolve<CreateActorUseCase>();
+            var          repository         = Container.Resolve<IActorRepository>();
+            Entity.Actor actor              = null;
+            repository.Save(Arg.Do<Entity.Actor>(a => actor = a));
             ActorCreated actorCreated = null;
             publisher.Publish(Arg.Do<ActorCreated>(e => actorCreated = e));
 

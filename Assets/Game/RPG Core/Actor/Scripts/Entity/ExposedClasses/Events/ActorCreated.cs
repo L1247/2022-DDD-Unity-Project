@@ -4,7 +4,7 @@ using DDDCore.Implement;
 
 #endregion
 
-namespace Game.Actor.Scripts.Entity.Events
+namespace Game.RPG_Core.Actor.Scripts.Entity.ExposedClasses.Events
 {
     public class ActorCreated : DomainEvent
     {

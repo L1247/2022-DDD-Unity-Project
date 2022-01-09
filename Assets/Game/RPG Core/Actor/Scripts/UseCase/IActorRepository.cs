@@ -1,7 +1,7 @@
 #region
 
 using DDDCore.Event.Usecase;
-using Game.Actor.Scripts.Entity;
+using RPG_Core.Actor.Entity.ExposedClasses;
 
 #endregion
 
