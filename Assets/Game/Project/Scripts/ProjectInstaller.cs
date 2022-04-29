@@ -1,6 +1,6 @@
 #region
 
-using DDDCore.Implement;
+using rStarUtility.DDDCore.Implement.Core;
 using Zenject;
 
 #endregion
