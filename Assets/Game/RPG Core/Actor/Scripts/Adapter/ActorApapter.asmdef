@@ -1,0 +1,19 @@
+{
+  "name": "ActorApapter",
+  "rootNamespace": "",
+  "references": [
+    "GUID:d5850554ec9b9384187cbcb6fb10d3e9",
+    "GUID:55598cdeb5ba4cc43979cdb28a877e6b",
+    "GUID:b18a16a3dcf3d01428b99057a0d9b91e",
+    "GUID:f22f718b9b174a74d89f976a69f9dd2a"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
