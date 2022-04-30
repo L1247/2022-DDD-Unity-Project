@@ -1,5 +1,53 @@
 {
   "dependencies": {
+    "com.cysharp.messagepipe": {
+      "version": "1.7.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
+    "com.cysharp.messagepipe.zenject": {
+      "version": "1.7.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
+    "com.cysharp.unitask": {
+      "version": "2.3.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
+    "com.neuecc.unirx": {
+      "version": "7.1.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
+    "com.rstar.rstarutility": {
+      "version": "https://github.com/L1247/rStarUtility.git?path=Assets/rStarUtility",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.svermeulen.extenject": "9.2.0-stcf3",
+        "com.cysharp.unitask": "2.3.1",
+        "com.cysharp.messagepipe": "1.7.2",
+        "com.cysharp.messagepipe.zenject": "1.7.2",
+        "com.neuecc.unirx": "7.1.0"
+      },
+      "hash": "4c5c6824cc95d5612f2ae88c7137e950b3f8b5f7"
+    },
+    "com.svermeulen.extenject": {
+      "version": "9.2.0-stcf3",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
