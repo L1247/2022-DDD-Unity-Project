@@ -9,9 +9,16 @@ using UnityEngine.UI;
 
 namespace ActorMovement.Prototype.Script
 {
+    internal enum MovementState
+    {
+        None , Idle , Moving
+    }
+
     public class ActorMovementPrototype : MonoBehaviour
     {
     #region Private Variables
+
+        private MovementState state;
 
         [SerializeField]
         private TMP_Text textState;
@@ -19,24 +26,44 @@ namespace ActorMovement.Prototype.Script
         [SerializeField]
         private Button buttonMove;
 
+        [SerializeField]
+        private Button buttonStop;
+
     #endregion
 
     #region Unity events
 
         private void Start()
         {
-            textState.text = "Idle";
+            ChangeState(MovementState.Idle);
             buttonMove.BindClick(MoveToward);
+            buttonStop.BindClick(Stop);
         }
 
     #endregion
 
     #region Private Methods
 
+        private void ChangeState(MovementState newState)
+        {
+            state = newState;
+            HandleStatChange();
+        }
+
+        private void HandleStatChange()
+        {
+            textState.text = state.ToString();
+        }
+
         private void MoveToward()
         {
             transform.position += transform.right;
-            textState.text     =  "Move";
+            ChangeState(MovementState.Moving);
+        }
+
+        private void Stop()
+        {
+            ChangeState(MovementState.Idle);
         }
 
     #endregion
